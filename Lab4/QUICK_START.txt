@@ -1,0 +1,117 @@
+╔══════════════════════════════════════════════════════════════════════╗
+║     POMONA TRANSIT MANAGEMENT SYSTEM - QUICK START GUIDE             ║
+║                    CS4350 Database Systems - Lab #4                  ║
+╚══════════════════════════════════════════════════════════════════════╝
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ ✅ STATUS: COMPLETE & READY TO RUN                                   │
+└──────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ 🚀 TO RUN THE APPLICATION:                                           │
+└──────────────────────────────────────────────────────────────────────┘
+
+    ./run.sh
+
+    That's it! The GUI will launch automatically.
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ 📋 BEFORE FIRST RUN (One-time setup):                                │
+└──────────────────────────────────────────────────────────────────────┘
+
+    1. Ensure MySQL is running
+    2. Create database:
+       mysql -u root -p < pomonatransit.sql
+    3. Load sample data:
+       mysql -u root -p < load_sample_data.sql
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ 🔌 DATABASE CONNECTION:                                              │
+└──────────────────────────────────────────────────────────────────────┘
+
+    Host:     127.0.0.1:3306
+    Database: pomonatransit
+    User:     root
+    Password: NewPassword123!
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ 🎯 FEATURES AVAILABLE:                                               │
+└──────────────────────────────────────────────────────────────────────┘
+
+    ✅ Trips Panel
+       • Search trips by location/date
+       • Add/Delete trip offerings
+       • Change driver or bus
+
+    ✅ Drivers Panel
+       • View all drivers
+       • Add new drivers
+       • View weekly schedules
+
+    ✅ Buses Panel
+       • View all buses
+       • Add/Delete buses
+
+    ✅ Stops Panel
+       • View stops for any trip
+
+    ✅ Actual Data Panel
+       • Record actual trip performance data
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ 📝 DATA FORMAT:                                                      │
+└──────────────────────────────────────────────────────────────────────┘
+
+    Date: YYYY-MM-DD  (e.g., 2025-10-23)
+    Time: HH:MM:SS    (e.g., 13:00:00)
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ 🧪 QUICK TEST:                                                       │
+└──────────────────────────────────────────────────────────────────────┘
+
+    1. Launch: ./run.sh
+    2. Click "Trips" in sidebar
+    3. Click "Show All" to see sample trips
+    4. Try searching for trips from "Pomona" to "LA"
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ 📚 MORE INFO:                                                        │
+└──────────────────────────────────────────────────────────────────────┘
+
+    • INSTRUCTIONS.md   - Detailed usage guide
+    • PROJECT_SUMMARY.md - Complete project overview
+    • README.md         - Original requirements
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ 🔧 TROUBLESHOOTING:                                                  │
+└──────────────────────────────────────────────────────────────────────┘
+
+    Problem: "Connection failed"
+    Solution: Check MySQL is running and credentials are correct
+
+    Problem: "Foreign key constraint"
+    Solution: Ensure referenced records exist (Trip, Driver, Bus)
+
+    Problem: Application won't start
+    Solution: Check Java version (java -version) - need 11+
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ 📁 PROJECT STRUCTURE:                                                │
+└──────────────────────────────────────────────────────────────────────┘
+
+    src/db/     - Database connection
+    src/dao/    - Data access objects (7 files)
+    src/gui/    - GUI panels (8 files)
+    bin/        - Compiled classes
+    lib/        - MySQL JDBC drivers
+
+┌──────────────────────────────────────────────────────────────────────┐
+│ ⚡ COMMANDS:                                                         │
+└──────────────────────────────────────────────────────────────────────┘
+
+    ./compile.sh  - Recompile if you make changes
+    ./run.sh      - Run the application
+
+╔══════════════════════════════════════════════════════════════════════╗
+║  Ready to go! Run ./run.sh to start the application 🚀               ║
+╚══════════════════════════════════════════════════════════════════════╝
