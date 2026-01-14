@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pts.q4.WeeklyScheduleController">
+   <children>
+      <Label layoutX="50.0" layoutY="14.0" prefHeight="17.0" prefWidth="75.0" text="Driver Name:" />
+      <TextField fx:id="textField" layoutX="50.0" layoutY="35.0" />
+      <DatePicker fx:id="datePicker" layoutX="252.0" layoutY="35.0" />
+      <Button layoutX="473.0" layoutY="35.0" mnemonicParsing="false" onAction="#viewScheduleAction" text="View Schedule" />
+      <TableView fx:id="table" layoutY="130.0" prefHeight="200.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="tripNumberCol" prefWidth="98.0" text="TripNumber" />
+          <TableColumn fx:id="dateCol" prefWidth="104.0" text="Date" />
+            <TableColumn fx:id="scheduledStartTimeCol" prefWidth="133.0" text="ScheduledStartTime" />
+            <TableColumn fx:id="scheduledArrivalTimeCol" prefWidth="158.0" text="SecheduledArrivalTime" />
+            <TableColumn fx:id="busIDCol" prefWidth="106.0" text="BusID" />
+        </columns>
+      </TableView>
+      <Label fx:id="driverNameLabel" layoutX="52.0" layoutY="87.0" text="Weekly Schedule for driver:" />
+      <Button layoutX="475.0" layoutY="346.0" mnemonicParsing="false" onAction="#backAction" text="Back to Menu" />
+      <Label layoutX="252.0" layoutY="14.0" prefHeight="17.0" prefWidth="75.0" text="Date:" />
+   </children>
+</AnchorPane>
